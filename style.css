@@ -58,7 +58,7 @@
   display: flex;
   align-items: center;
   width: fit-content;
-  animation: carouselAnim 50s infinite alternate linear;
+  animation: carouselAnimpart2 50s infinite alternate linear;
 }
 
 .part2 .entry {
@@ -78,10 +78,10 @@
 
 @media only screen and (max-width: 768px) {
 .part2  .items {
-    animation: carouselAnim 35s infinite alternate linear;
+    animation: carouselAnimpart2 35s infinite alternate linear;
   }
   
-  @keyframes carouselAnim {
+  @keyframes carouselAnimpart2 {
     from {
       transform: translate(0, 0);
     }
@@ -100,7 +100,7 @@
   font-weight: bold;
 }
 
-@keyframes carouselAnim {
+@keyframes carouselAnimpart2 {
   from {
     transform: translate(0, 0);
   }
@@ -153,3 +153,93 @@
 }
 /* ............................................part4  */
 
+#part4 body{
+  background-color: #282e32;
+}
+
+#part4 h1{
+  color: #fff;
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: normal;
+}
+
+@keyframes carouselAnimpart4{
+  0%{
+    transform: translateX(100%) rotatey(0) scale(1.2, 1.2);
+    transform-origin: center center;
+    z-index: 10;
+  }
+  27%{
+    transform: translateX(100%) rotatey(0) scale(1.2, 1.2);
+    transform-origin: center center;
+    z-index: 10;
+  }
+  33.33333%{
+    transform: translateX(0) translateY(0) rotatey(10deg) scale(0.8,1);
+    transform-origin: left center;
+    z-index: 5;
+  }
+  60%{
+    transform: translateX(0) translateY(0) rotatey(10deg) scale(0.8,1);
+    transform-origin: left center;
+    z-index: 5;
+  }
+  66.666666%{
+    transform: translateX(200%) translateY(0) rotatey(-10deg) scale(0.8,1);
+    transform-origin: right center;
+    z-index: 5;
+  }
+  93%{
+    transform: translateX(200%) translateY(0) rotatey(-10deg) scale(0.8,1);
+    transform-origin: right center;
+    z-index: 5;
+  }
+  100%{
+    transform: translateX(100%) rotatey(0) scale(1.2, 1.2);
+    transform-origin: center center;
+    z-index: 10;
+  }
+}
+
+#part4 .carousel__container{
+  width: 100%;
+  max-width: 960px;
+  perspective: 300px;
+  perspective-origin: 50% 60%;
+  min-height: 14em;
+  margin: 3em auto;
+}
+
+#part4 .carousel__item{
+  position: absolute;
+  width: 33%; 
+  padding-bottom: 19%;
+  animation-name: carouselAnimpart4;
+  /* transform: translateX(0) rotatey(50deg); */
+  transform-origin: left center;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+
+#part4 .carousel__item:first-child{
+  animation-delay: -4s;
+}
+.carousel__item:last-child{
+  animation-delay: -8s;
+}
+
+#part4 .carousel__image{
+  position: absolute;
+  width: 100%;
+  border-radius: 2px;
+}
+
+#part4{
+    background-color: rgba(111, 78, 55, 0.5);
+    height: 100vh;
+}
+
+.part44{
+    background-color: #4B3832;
+}
