@@ -1,0 +1,142 @@
+#home-section .image {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+#home-section .name{
+  position: absolute;
+  top: 40%;  /* vertical center */
+  left: 50%; /* horizontal center */
+  transform: translate(-50%, -50%);
+  color: white; /* text color */
+  font-size: 3rem; /* adjust size */
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* for readability */
+}
+#home-section .name2{
+      position: absolute;
+  top: 50%;  /* vertical center */
+  left: 50%; /* horizontal center */
+  transform: translate(-50%, -50%);
+  color: white; /* text color */
+  font-size: 1.5rem; /* adjust size */
+
+}
+
+/* ...................................... part2 */
+
+@import url("https://fonts.googleapis.com/css?family=Muli:400,700&display=swap");
+
+.part2 body {
+  margin: 0;
+  height: calc(100vh - 8em);
+  font-family: "Muli", sans-serif;
+  /* background-color: #f9f9f9; */
+  background-color: black;
+  
+}
+
+.part2 h1 {
+  text-align: center;
+  margin: 1.5em;
+}
+
+.part2 img {
+  width: 95%;
+  height: 60%;
+  border-radius: 10%;
+}
+
+.part2 .container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.part2 .items {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  animation: carouselAnim 50s infinite alternate linear;
+}
+
+.part2 .entry {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 300px;
+  height: 500px;
+  background: #fff;
+  /* background: black; */
+  margin: 1em;
+  padding: 0.5em;
+  border-radius: 10px;
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 768px) {
+.part2  .items {
+    animation: carouselAnim 35s infinite alternate linear;
+  }
+  
+  @keyframes carouselAnim {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(calc(-100% + (2 * 300px)));
+    }
+  }
+}
+
+.entry p {
+  text-align: center;
+  padding: 1em;
+}
+
+.part2 .name {
+  font-weight: bold;
+}
+
+@keyframes carouselAnim {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(calc(-100% + (5 * 300px)));
+  }
+}
+
+.part2 .container .faders {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+}
+
+.part2 .faders .right,
+.part2 .faders .left {
+  background: linear-gradient(
+    to right,
+    rgba(245, 245, 245, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  z-index: 200;
+}
+
+.part2 .right {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(245, 245, 245, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.part2{
+    height: 500px;
+    /* background-color: black; */
+}
