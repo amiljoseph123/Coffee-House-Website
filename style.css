@@ -2,6 +2,7 @@
   position: relative;
   display: inline-block;
   width: 100%;
+  
 }
 
 #home-section .name{
@@ -28,12 +29,19 @@
 
 @import url("https://fonts.googleapis.com/css?family=Muli:400,700&display=swap");
 
+.part2{
+    background-color: #39211a;
+    color: white;
+}
+.part2 p{
+    color: red;
+}
 .part2 body {
   margin: 0;
   height: calc(100vh - 8em);
   font-family: "Muli", sans-serif;
   /* background-color: #f9f9f9; */
-  background-color: black;
+  background-color: #A67B5B;
   
 }
 
@@ -147,7 +155,7 @@
     font-weight: 100px;
 }
 #part3{
-    background-color: black;
+    background-color: #4B3832;
     color: white;
     height: 100vh;
 }
@@ -242,4 +250,177 @@
 
 .part44{
     background-color: #4B3832;
+}
+
+/* ........................part5...  */
+
+
+/* Base styles */
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} */
+#part5 body {
+  font-family: 'Arial, sans-serif';
+  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+#part5 .header {
+  margin-bottom: 50px;
+}
+#part5 .title {
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+#part5 .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+#part5 .card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  width: 350px;
+  height: 500px;
+  /* height: auto; */
+  transition: transform 0.6s, background 0.6s;
+  position: relative;
+}
+#part5 .card-image {
+  /* background: url('https://picsum.photos/250/150?random=1') no-repeat center center; */
+  background-size: cover;
+  width: 100%;
+  height: 450px;
+}
+
+#part5 .card img {
+  width: 100%;
+  height: 350px; 
+  object-fit: cover; 
+}
+#part5 .card-content {
+  padding: 20px;
+  text-align: center;
+}
+#part5 .card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+#part5 .card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+#part5 #card1:hover {
+  animation: rotateCard1 3s infinite;
+}
+#part5 #card2:hover {
+  animation: bounceCard2 3s infinite;
+}
+#part5 #card3:hover {
+  animation: flipCard3 3s infinite;
+}
+#part5 #card4:hover {
+  animation: pulseCard4 3s infinite;
+}
+#card5:hover {
+  animation: slideCard5 3s infinite;
+}
+
+/* Keyframe animations for cards */
+@keyframes rotateCard1 {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes bounceCard2 {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes flipCard3 {
+  0% {
+    transform: perspective(1000px) rotateX(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateX(360deg);
+  }
+}
+
+@keyframes pulseCard4 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideCard5 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Global animations */
+body {
+  animation: backgroundShift 10s ease infinite;
+}
+
+@keyframes backgroundShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.title {
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 255)
+  }
 }
