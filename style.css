@@ -284,6 +284,7 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  /* align-items: center; */
 }
 #part5 .card {
   background: #fff;
@@ -310,9 +311,16 @@
   height: 350px; 
   object-fit: cover; 
 }
-#part5 .card-content {
+/* #part5 .card-content {
   padding: 20px;
   text-align: center;
+} */
+#part5 .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  height: 100%; /* must have height for vertical centering to work */
 }
 #part5 .card h2 {
   font-size: 1.5rem;
@@ -423,4 +431,99 @@ body {
   from {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 255)
   }
+}
+
+
+/* orderbutton  */
+:root {
+  /* --pink: hsl(320, 93%, 63%);
+  --trans-red: hsl(358, 88%, 61%);
+  --yellow: hsl(46, 92%, 55%); */
+
+  --coffee-dark: hsl(25, 32%, 20%);   
+  --coffee-medium: hsl(30, 25%, 40%); 
+  --coffee-light: hsl(35, 35%, 60%);  
+
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 200ms ease-out;
+}
+
+.order-button body {
+  width: 30vw;
+  height: 10vh;
+  /* background: #dedede; */
+  background: #4B3832;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-button button {
+  appearance: none;
+  /* background: transparent; */
+   background-color: #4B3832;
+  border: none;
+  cursor: pointer;
+  isolation: isolate;
+}
+
+.order-button {
+  color: #000;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  border-radius: 9999rem;
+  background: white;
+  box-shadow: 0 12px 24px 0 color-mix(in oklab, black, transparent 90%);
+  position: relative;
+  overflow: hidden;
+}
+
+.order-button::before {
+  content: "";
+  border-radius: inherit;
+  /* background: linear-gradient(90deg, var(--pink), var(--trans-red), var(--yellow)); */
+  background: linear-gradient(90deg, var(--coffee-dark), var(--coffee-medium), var(--coffee-light));
+
+  
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+}
+
+.order-button > span {
+  color: transparent;
+  /* background: linear-gradient(90deg, var(--pink), var(--trans-red), var(--yellow)); */
+  background: linear-gradient(90deg, var(--coffee-dark), var(--coffee-medium), var(--coffee-light));
+
+  background-clip: text;
+  -webkit-background-clip: text; /* Safari fix */
+}
+
+.order-button:hover,
+.order-button:focus {
+  box-shadow: 0 0 0 0 color-mix(in oklab, black, transparent 90%);
+  transform: scale(1.2);
+}
+
+.order-button:hover::before,
+.order-button:focus::before {
+  transform: translateX(0);
+}
+
+.order-button:hover > span,
+.order-button:focus > span {
+  color: white;
 }
