@@ -94,7 +94,7 @@
 
 #home-section .name{
   position: absolute;
-  top: 40%;  /* vertical center */
+  top: 30%;  /* vertical center */
   left: 50%; /* horizontal center */
   transform: translate(-50%, -50%);
   color: white; /* text color */
@@ -103,6 +103,15 @@
   text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* for readability */
 }
 #home-section .name2{
+      position: absolute;
+  top: 40%;  /* vertical center */
+  left: 50%; /* horizontal center */
+  transform: translate(-50%, -50%);
+  color: white; /* text color */
+  font-size: 1.5rem; /* adjust size */
+
+}
+#home-section .name3{
       position: absolute;
   top: 50%;  /* vertical center */
   left: 50%; /* horizontal center */
