@@ -644,3 +644,48 @@ footer a:hover {
   color: #f5d7b5 !important; /* lighter coffee-cream hover color */
 }
 
+/* ..............  */
+
+#time .image {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  
+}
+#time .name{
+  position: absolute;
+  top: 40%;  /* vertical center */
+  left: 50%; /* horizontal center */
+  transform: translate(-50%, -50%);
+  color: white; /* text color */
+  font-size: 3rem; /* adjust size */
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* for readability */
+}
+#time .name2{
+      position: absolute;
+  top: 50%;  /* vertical center */
+  left: 50%; /* horizontal center */
+  transform: translate(-50%, -50%);
+  color: white; /* text color */
+  font-size: 2.1rem; /* adjust size */
+  font-weight: 100px;
+
+}
+
+#time {
+  display: flex;
+}
+
+#time .image {
+
+  flex: 1; /* equal width for both */
+  position: relative; /* so your text can be positioned over the image */
+}
+
+#time img {
+  display: block;
+  width: 100%;
+  /* height: auto; */
+  height: 700px;
+}
