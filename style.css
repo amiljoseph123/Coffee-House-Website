@@ -4,6 +4,10 @@
   width: 100%;
   
 }
+#home-section {
+  background-color: #39211a;
+}
+
 
 #home-section .name{
   position: absolute;
@@ -23,6 +27,13 @@
   color: white; /* text color */
   font-size: 1.5rem; /* adjust size */
 
+}
+.carousel-item{
+  background-color: #282e32
+}
+
+#home-section.carousel-item {
+  margin-bottom: 0;
 }
 
 /* ...................................... part2 */
@@ -276,7 +287,7 @@
 }
 #part5 .title {
   font-size: 2.5rem;
-  color: #fff;
+  color: #39211a;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 #part5 .content {
@@ -534,3 +545,19 @@ body {
   color: #39211a;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+  
+  /* foooooter............  */
+footer {
+  background-color: #4b2e2b !important; /* deep coffee brown */
+  color: #fff !important; /* white text */
+}
+
+footer a {
+  color: #fff !important; /* make links white */
+  text-decoration: none;  /* optional: remove underline */
+}
+
+footer a:hover {
+  color: #f5d7b5 !important; /* lighter coffee-cream hover color */
+}
+
