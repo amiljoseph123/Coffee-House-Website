@@ -128,7 +128,8 @@
     color: white;
 }
 .part2 p{
-    color: red;
+    color: chocolate;
+    font-size: 25px;
 }
 .part2 body {
   margin: 0;
@@ -146,7 +147,7 @@
 
 .part2 img {
   width: 95%;
-  height: 60%;
+  height: 75%;
   border-radius: 10%;
 }
 
@@ -261,9 +262,11 @@
 
 #part4 h1{
   color: #fff;
-  font-family: sans-serif;
+  font-family: 'Playfair Display', serif;
   text-align: center;
-  font-weight: normal;
+  /* font-weight: normal; */
+  font-weight: bolder;
+  font-size: 80px;
 }
 
 @keyframes carouselAnimpart4{
