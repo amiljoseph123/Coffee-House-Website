@@ -253,7 +253,7 @@
     /* background-color: black; */
 }
 #part3 h1{
-    /* margin-top: 20px; */
+ 
     text-align: center;
     font-size: 50px;
     font-weight: 100px;
@@ -261,12 +261,22 @@
 #part3{
     background-color: #4B3832;
     color: white;
-    height: 100vh;
+    /* height: 100vh; */
+    min-height: 100vh;
+    padding: 50px 0;
 }
 /* ............................................part4  */
 
-#part4 body{
-  background-color: #282e32;
+#part3 h1,
+#part4 .heading {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+#part4 {
+  /* background-color: #282e32; */
+  background-color: #4B3832;
 }
 
 #part4 h1{
@@ -349,93 +359,115 @@
   border-radius: 2px;
 }
 
-#part4{
+/* #part4{
     background-color: rgba(111, 78, 55, 0.5);
     height: 100vh;
 }
 
 .part44{
     background-color: #4B3832;
+} */
+
+#part4 {
+    /* background-color: rgba(111, 78, 55, 0.5); */
+    min-height: 100vh; /* instead of height */
+    padding: 100px 0;  /* add spacing from previous section */
+    position: relative; /* needed for absolute carousel items */
+
+    
 }
+
+
+
+.part44 {
+    background-color: #4B3832;
+    position: relative; /* container for absolute items */
+    min-height: 400px;  /* enough height to contain carousel */
+}
+
 
 /* ........................part5...  */
 
 
-/* Base styles */
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-} */
-#part5 body {
-  font-family: 'Arial, sans-serif';
-  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  overflow: hidden;
+#part5 {
+    font-family: Arial, sans-serif;
+    /* background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%); */
+    background-color: #39211a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 100px 0;
+    min-height: 100vh;
 }
+
 #part5 .header {
-  margin-bottom: 50px;
+    margin-bottom: 50px;
 }
+
 #part5 .title {
-  font-size: 2.5rem;
-  color: #39211a;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 2.5rem;
+    /* color: #39211a; */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
+
 #part5 .content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  /* align-items: center; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
+
 #part5 .card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-  width: 350px;
-  height: 500px;
-  /* height: auto; */
-  transition: transform 0.6s, background 0.6s;
-  position: relative;
-}
-#part5 .card-image {
-  /* background: url('https://picsum.photos/250/150?random=1') no-repeat center center; */
-  background-size: cover;
-  width: 100%;
-  height: 450px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 350px;
+    transition: transform 0.6s, background 0.6s;
+    position: relative;
 }
 
 #part5 .card img {
-  width: 100%;
-  height: 350px; 
-  object-fit: cover; 
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
-/* #part5 .card-content {
-  padding: 20px;
-  text-align: center;
-} */
+
 #part5 .card-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertical center */
-  align-items: center;     /* horizontal center */
-  height: 100%; /* must have height for vertical centering to work */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
 }
+
 #part5 .card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
+
 #part5 .card p {
-  font-size: 1rem;
-  color: #555;
+    font-size: 1rem;
+    color: #555;
 }
+
+.order-button {
+    background-color: #4B3832;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order-button:hover {
+    background-color: #3a2e28;
+}
+
 
 
 #part5 #card1:hover {
@@ -645,6 +677,7 @@ body {
 footer {
   background-color: #4b2e2b !important; /* deep coffee brown */
   color: #fff !important; /* white text */
+  width: 100%;
 }
 
 footer a {
@@ -666,17 +699,17 @@ footer a:hover {
 }
 #time .name{
   position: absolute;
-  top: 40%;  /* vertical center */
-  left: 50%; /* horizontal center */
+  top: 40%;  
+  left: 50%; 
   transform: translate(-50%, -50%);
-  color: white; /* text color */
-  font-size: 3rem; /* adjust size */
+  color: white; 
+  font-size: 3rem; 
   font-weight: bold;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* for readability */
 }
 #time .name2{
       position: absolute;
-  top: 50%;  /* vertical center */
+  top: 60%;  /* vertical center */
   left: 50%; /* horizontal center */
   transform: translate(-50%, -50%);
   color: white; /* text color */
