@@ -679,7 +679,9 @@ footer {
   color: #fff !important; /* white text */
   width: 100%;
 }
-
+footer p{
+  font-size: 15px;
+}
 footer a {
   color: #fff !important; /* make links white */
   text-decoration: none;  /* optional: remove underline */
